@@ -1,22 +1,62 @@
-async function initMap() {
-    //  Request the needed libraries.
-    const [{ Map }, { AdvancedMarkerElement }] = await Promise.all([
-        google.maps.importLibrary("maps"),
-        google.maps.importLibrary("marker"),
-    ]);
-    // Get the gmp-map element.
-    const mapElement = document.querySelector("gmp-map");
-    // Get the inner map.
-    const innerMap = mapElement.innerMap;
-    // Set map options.
-    innerMap.setOptions({
-        mapTypeControl: false,
+// This example displays a marker at the center of Australia.
+// When the user clicks the marker, an info window opens.
+function initMap() {
+    const home = { lat: 51.41440159227802, lng: -0.007830720535929274 };
+
+    const martinb = { lat: 43.26694601928382, lng: -2.0156468200988975};
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        center: home,
     });
-    // Add a marker positioned at the map center (Uluru).
-    const marker = new AdvancedMarkerElement({
-        map: innerMap,
-        position: mapElement.center,
-        title: "Uluru/Ayers Rock",
+    const homeContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Home</h1>';
+
+    const homeInfoWindow = new google.maps.InfoWindow({
+        content: homeContentString,
+        ariaLabel: "Home",
+    });
+    const homeMarker = new google.maps.Marker({
+        position: home,
+        map,
+        title: "Home",
+    });
+    homeMarker.addListener("click", () => {
+        homeInfoWindow.open({
+            anchor: homeMarker,
+            map,
+        });
+    });
+
+    const martinbContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Restaurante Martin Berasategui</h1>' +
+        '<div id="bodyContent">' +
+        "Also referred to as Martin B, Three Star Michelin restaurant in " +
+        "San Sebastian visited on 22 October 2025 for Steven's 50th birthday organised by Kathryn" +
+        "</div>" +
+        "</div>";
+
+    const martinbInfoWindow = new google.maps.InfoWindow({
+        content: martinbContentString,
+        ariaLabel: "Martin B",
+    });
+    const martinbMarker = new google.maps.Marker({
+        position: martinb,
+        map,
+        title: "Martin B",
+    });
+    martinbMarker.addListener("click", () => {
+        martinbInfoWindow.open({
+            anchor: martinbMarker,
+            map,
+        });
     });
 }
-initMap();
+
+window.initMap = initMap;
