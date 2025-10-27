@@ -1,12 +1,16 @@
-function initMap() {
-    const home = { lat: 51.41440159227802, lng: -0.007830720535929274 };
+"use strict";
 
-    const map = new google.maps.Map(document.getElementById("map"), {
+async function initMap() {
+
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+    const map = new Map(document.getElementById('map'), {
+        center: { lat: 51.41440159227802, lng: -0.007830720535929274 },
         zoom: 5,
-        center: home,
+        mapId: 'KATHRYN_MAP',
     });
 
-    //
     const homeContentString =
         '<div id="content">' +
         '<div id="siteNotice">' +
@@ -17,11 +21,13 @@ function initMap() {
         content: homeContentString,
         ariaLabel: "Home",
     });
-    const homeMarker = new google.maps.Marker({
-        position: home,
+
+    const homeMarker = new AdvancedMarkerElement({
         map,
+        position: { lat: 51.41440159227802, lng: -0.007830720535929274 },
         title: "Home",
     });
+
     homeMarker.addListener("click", () => {
         homeInfoWindow.open({
             anchor: homeMarker,
@@ -46,11 +52,13 @@ function initMap() {
         content: boccaSocialContentString,
         ariaLabel: "Bocca Social",
     });
+
     const boccaSocialMarker = new google.maps.Marker({
         position: boccaSocial,
         map,
         title: "Bocca Social",
     });
+
     boccaSocialMarker.addListener("click", () => {
         boccaSocialInfoWindow.open({
             anchor: boccaSocialMarker,
@@ -74,11 +82,13 @@ function initMap() {
         content: hotelJakartaContentString,
         ariaLabel: "Hotel Jakarta",
     });
+
     const hotelJakartaMarker = new google.maps.Marker({
         position: hotelJakarta,
         map,
         title: "Hotel Jakarta",
     });
+
     hotelJakartaMarker.addListener("click", () => {
         hotelJakartaInfoWindow.open({
             anchor: hotelJakartaMarker,
@@ -106,11 +116,13 @@ function initMap() {
         content: villaFavoritaContentString,
         ariaLabel: "Hotel Villa Favorita",
     });
+
     const villaFavoritaMarker = new google.maps.Marker({
         position: villaFavorita,
         map,
         title: "Hotel Villa Favorita",
     });
+
     villaFavoritaMarker.addListener("click", () => {
         villaFavoritaInfoWindow.open({
             anchor: villaFavoritaMarker,
@@ -136,11 +148,13 @@ function initMap() {
         content: arimaContentString,
         ariaLabel: "ARIMA Hotel  Spa",
     });
+
     const arimaMarker = new google.maps.Marker({
         position: arima,
         map,
         title: "ARIMA Hotel & Spa",
     });
+
     arimaMarker.addListener("click", () => {
         arimaInfoWindow.open({
             anchor: arimaMarker,
@@ -165,11 +179,13 @@ function initMap() {
         content: martinbContentString,
         ariaLabel: "Martin Berasategui",
     });
+
     const martinbMarker = new google.maps.Marker({
         position: martinb,
         map,
         title: "Martin Berasategui",
     });
+
     martinbMarker.addListener("click", () => {
         martinbInfoWindow.open({
             anchor: martinbMarker,
@@ -178,4 +194,4 @@ function initMap() {
     });
 }
 
-window.initMap = initMap;
+window.initMap = initMap();
