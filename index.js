@@ -67,9 +67,10 @@ function initMap() {
         "</div>" +
         '<h1 id="firstHeading" class="firstHeading">Hotel Villa Favorita</h1>' +
         '<div id="bodyContent">' +
-        "The beautiful hotel where we stayed 19-20 October 2025" +
+        "The gorgeous hotel where we stayed 19-20 October 2025" +
         " that Kathryn organised for Steven's 50th birthday. The view of" +
-        " the beach and sea from the window was stunning." +
+        " the beach and sea from the window was stunning. Breakfast and drinks" +
+        " in the beautiful bar."
         "</div>" +
         "</div>";
 
@@ -89,6 +90,36 @@ function initMap() {
         });
     });
 
+    const arima = { lat:43.29095667152992, lng: -1.9809372899031183 };
+
+    const arimaContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">ARIMA Hotel & Spa</h1>' +
+        '<div id="bodyContent">' +
+        "The beautiful hotel where we stayed 21-22 October 2025" +
+        " that Kathryn organised for Steven's 50th birthday. We had a lovely balcony and a great" +
+        " view of the grounds and forest. We used the luxury spa and had a relaxing massage." +
+        "</div>" +
+        "</div>";
+
+    const arimaInfoWindow = new google.maps.InfoWindow({
+        content: arimaContentString,
+        ariaLabel: "ARIMA Hotel  Spa",
+    });
+    const arimaMarker = new google.maps.Marker({
+        position: arima,
+        map,
+        title: "ARIMA Hotel & Spa",
+    });
+    arimaMarker.addListener("click", () => {
+        arimaInfoWindow.open({
+            anchor: arimaMarker,
+            map,
+        });
+    });
+
     const martinb = { lat: 43.26694601928382, lng: -2.0156468200988975 };
     const martinbContentString =
         '<div id="content">' +
@@ -98,8 +129,7 @@ function initMap() {
         '<div id="bodyContent">' +
         "Also referred to as Martin B, Three Star Michelin restaurant in " +
         "San Sebastián visited on 22 October 2025 for lunch to celebrate " +
-        "Steven's 50th birthday organised by Kathryn. We had the tasting menu and " +
-        "half wine pairing. It was amazing!" +
+        "Steven's 50th birthday organised by Kathryn. We had the amazing tasting menu." +
         "</div>" +
         "</div>";
 
