@@ -58,6 +58,34 @@ function initMap() {
         });
     });
 
+    const hotelJakarta = { lat: 52.37950628254069, lng: 4.922408613241471 };
+
+    const hotelJakartaContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Hotel Jakarta</h1>' +
+        '<div id="bodyContent">' +
+        "The beautiful hotel for our stay 25-26 April 2023. Our first holiday together." +
+        "</div>" +
+        "</div>";
+
+    const hotelJakartaInfoWindow = new google.maps.InfoWindow({
+        content: hotelJakartaContentString,
+        ariaLabel: "Hotel Jakarta",
+    });
+    const hotelJakartaMarker = new google.maps.Marker({
+        position: hotelJakarta,
+        map,
+        title: "Hotel Jakarta",
+    });
+    hotelJakartaMarker.addListener("click", () => {
+        hotelJakartaInfoWindow.open({
+            anchor: hotelJakartaMarker,
+            map,
+        });
+    });
+
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
 
