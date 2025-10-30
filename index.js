@@ -66,6 +66,7 @@ async function initMap() {
         });
     });
 
+    // Amsterdam April 2023
     const hotelJakarta = { lat: 52.37950628254069, lng: 4.922408613241471 };
 
     const hotelJakartaContentString =
@@ -92,6 +93,40 @@ async function initMap() {
     hotelJakartaMarker.addListener("click", () => {
         hotelJakartaInfoWindow.open({
             anchor: hotelJakartaMarker,
+            map,
+        });
+    });
+
+    const keukenhof = { lat: 52.26975309745833, lng: 4.547123268622359 };
+
+    const keukenhofMarker = new AdvancedMarkerElement({
+        map,
+        position: keukenhof,
+        title: "Keukenhof",
+    });
+
+    const keukenhofContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<div id="infoBox-img">' +
+        '<img src="assets/images/keukenhof_ks_web.jpg" width="300" />' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Keukenhof</h1>' +
+        '<div id="bodyContent">' +
+        "Perfect timing for the beautiful tulips when we visited 26 April 2023" +
+        "</div>" +
+        "</div>";
+
+    const keukenhofInfoWindow = new google.maps.InfoWindow({
+        content: keukenhofContentString,
+        maxWidth: 350,
+        ariaLabel: "Keukenhof",
+    });
+
+    keukenhofMarker.addListener("click", () => {
+        keukenhofInfoWindow.open({
+            anchor: keukenhofMarker,
             map,
         });
     });
