@@ -114,7 +114,7 @@ async function initMap() {
         '</div>' +
         '<h1 id="firstHeading" class="firstHeading">Keukenhof</h1>' +
         '<div id="bodyContent">' +
-        "Perfect timing for the beautiful tulips when we visited 26 April 2023" +
+        "Perfect timing for the when we visited 26 April 2023, the beautiful tulips were in full bloom." +
         "</div>" +
         "</div>";
 
@@ -152,9 +152,9 @@ async function initMap() {
         ariaLabel: "Hotel Villa Favorita",
     });
 
-    const villaFavoritaMarker = new google.maps.Marker({
-        position: villaFavorita,
+    const villaFavoritaMarker = new AdvancedMarkerElement({
         map,
+        position: villaFavorita,
         title: "Hotel Villa Favorita",
     });
 
@@ -184,9 +184,9 @@ async function initMap() {
         ariaLabel: "ARIMA Hotel  Spa",
     });
 
-    const arimaMarker = new google.maps.Marker({
-        position: arima,
+    const arimaMarker = new AdvancedMarkerElement({
         map,
+        position: arima,
         title: "ARIMA Hotel & Spa",
     });
 
@@ -215,9 +215,9 @@ async function initMap() {
         ariaLabel: "Martin Berasategui",
     });
 
-    const martinbMarker = new google.maps.Marker({
-        position: martinb,
+    const martinbMarker = new AdvancedMarkerElement({
         map,
+        position: martinb,
         title: "Martin Berasategui",
     });
 
