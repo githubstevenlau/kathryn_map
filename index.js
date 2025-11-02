@@ -42,6 +42,10 @@ async function initMap() {
         '<div id="content">' +
         '<div id="siteNotice">' +
         "</div>" +
+        '<div id="infoBox-img">' +
+        '<img src="assets/images/bocca0.jpg" width="300" alt="Bocca Social entrance" />' +
+        '<img src="assets/images/bocca1.jpg" width="300" alt="Bocca Social menu" />' +
+        '</div>' +
         '<h1 id="firstHeading" class="firstHeading">Bocca Social</h1>' +
         '<div id="bodyContent">' +
         "First date with Kathryn on 10 Dec 2022. Italian restaurant on Beckenham High Street." +
@@ -110,7 +114,7 @@ async function initMap() {
         '<div id="siteNotice">' +
         "</div>" +
         '<div id="infoBox-img">' +
-        '<img src="assets/images/keukenhof_ks_web.jpg" width="300" />' +
+        '<img src="assets/images/keukenhof_ks_web.jpg" width="300" alt="Keukenhof Kathryn and Steven" />' +
         '</div>' +
         '<h1 id="firstHeading" class="firstHeading">Keukenhof</h1>' +
         '<div id="bodyContent">' +
