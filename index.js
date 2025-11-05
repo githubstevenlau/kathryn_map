@@ -114,7 +114,7 @@ async function initMap() {
         '<div id="siteNotice">' +
         "</div>" +
         '<div id="infoBox-img">' +
-        '<img src="assets/images/keukenhof_ks_web.jpg" width="300" alt="Keukenhof Kathryn and Steven" />' +
+        '<img src="assets/images/keukenhof_ks_web.jpg" width="400" alt="Keukenhof Kathryn and Steven" />' +
         '</div>' +
         '<h1 id="firstHeading" class="firstHeading">Keukenhof</h1>' +
         '<div id="bodyContent">' +
@@ -124,13 +124,81 @@ async function initMap() {
 
     const keukenhofInfoWindow = new google.maps.InfoWindow({
         content: keukenhofContentString,
-        maxWidth: 350,
+        maxWidth: 400,
         ariaLabel: "Keukenhof",
     });
 
     keukenhofMarker.addListener("click", () => {
         keukenhofInfoWindow.open({
             anchor: keukenhofMarker,
+            map,
+        });
+    });
+
+    // Barcelona April 2024
+    const sallesPere = { lat: 41.39695216566915, lng: 2.1924138317727158 };
+
+    const sallesPereContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Salles Pere IV Hotel</h1>' +
+        '<div id="bodyContent">' +
+        "Holiday in Barcelona: Kathryn, Ellis, Heath and Steven." +
+        "The lovely hotel where we stayed 7-10 April 2024, " +
+        "great location with a spa, pool and rooftop bar." +
+        "</div>" +
+        "</div>";
+
+    const sallesPereInfoWindow = new google.maps.InfoWindow({
+        content: sallesPereContentString,
+        ariaLabel: "Salles Pere IV Hotel",
+    });
+
+    const sallesPereMarker = new AdvancedMarkerElement({
+        map,
+        position: sallesPere,
+        title: "Salles Pere IV Hotel",
+    });
+
+    sallesPereMarker.addListener("click", () => {
+        sallesPereInfoWindow.open({
+            anchor: sallesPereMarker,
+            map,
+        });
+    });
+
+    const icebarcelona = { lat: 41.38556354344581, lng: 2.197352671163502 };
+
+    const icebarcelonaContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<div id="infoBox-img">' +
+        '<img src="assets/images/icebar.jpg" width="400" alt="Icebarcelona Kathryn, Ellis, Heath and Steven" />' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Icebarcelona</h1>' +
+        '<div id="bodyContent">' +
+        'Holiday with Kathryn, Ellis, Heath and Steven.' +
+        'Our first activity in Barcelona on 7 April 2024' +
+        '</div>' +
+        '</div>';
+
+    const icebarcelonaInfoWindow = new google.maps.InfoWindow({
+        content: icebarcelonaContentString,
+        maxWidth: 400,
+        ariaLabel: "Icebarcelona",
+    });
+
+    const icebarcelonaMarker = new AdvancedMarkerElement({
+        map,
+        position: icebarcelona,
+        title: "Icebarcelona",
+    });
+
+    icebarcelonaMarker.addListener("click", () => {
+        icebarcelonaInfoWindow.open({
+            anchor: icebarcelonaMarker,
             map,
         });
     });
@@ -148,8 +216,8 @@ async function initMap() {
         " that Kathryn organised for Steven's 50th birthday. The view of" +
         " the beach and sea from the window was stunning. Breakfast and drinks" +
         " in the beautiful bar."
-        "</div>" +
-        "</div>";
+        '</div>' +
+        '</div>';
 
     const villaFavoritaInfoWindow = new google.maps.InfoWindow({
         content: villaFavoritaContentString,
@@ -180,8 +248,8 @@ async function initMap() {
         "The beautiful hotel where we stayed 21-22 October 2025" +
         " that Kathryn organised for Steven's 50th birthday. We had a lovely balcony and a great" +
         " view of the grounds and forest. We used the luxury spa and had a relaxing massage." +
-        "</div>" +
-        "</div>";
+        '</div>' +
+        '</div>';
 
     const arimaInfoWindow = new google.maps.InfoWindow({
         content: arimaContentString,
