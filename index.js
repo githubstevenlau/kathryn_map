@@ -233,6 +233,36 @@ async function initMap() {
         });
     });
 
+    const parkGuell = { lat: 41.41463959955516, lng: 2.1526944970858692 };
+
+    const parkGuellContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Park Guell</h1>' +
+        '<div id="bodyContent">' +
+        'Park Guell guided tour 8 April 2024' +
+        '</div>' +
+        '</div>';
+
+    const parkGuellInfoWindow = new google.maps.InfoWindow({
+        content: parkGuellContentString,
+        ariaLabel: "Park Guell",
+    });
+
+    const parkGuellMarker = new AdvancedMarkerElement({
+        map,
+        position: parkGuell,
+        title: "Park Guell",
+    });
+
+    parkGuellMarker.addListener("click", () => {
+        parkGuellInfoWindow.open({
+            anchor: parkGuellMarker,
+            map,
+        });
+    });
+
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
 
