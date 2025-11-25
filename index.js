@@ -70,6 +70,7 @@ async function initMap() {
         });
     });
 
+
     // Amsterdam April 2023
     const hotelJakarta = { lat: 52.37950628254069, lng: 4.922408613241471 };
 
@@ -259,6 +260,36 @@ async function initMap() {
     parkGuellMarker.addListener("click", () => {
         parkGuellInfoWindow.open({
             anchor: parkGuellMarker,
+            map,
+        });
+    });
+
+    const pobleEspanyol = { lat: 41.369088256902614, lng: 2.1469514978508744 };
+
+    const pobleEspanyolContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Poble Espanyol</h1>' +
+        '<div id="bodyContent">' +
+        'Examples of different Spanish architecture, 8 April 2024' +
+        '</div>' +
+        '</div>';
+
+    const pobleEspanyolInfoWindow = new google.maps.InfoWindow({
+        content: pobleEspanyolContentString,
+        ariaLabel: "Poble Espanyol",
+    });
+
+    const pobleEspanyolMarker = new AdvancedMarkerElement({
+        map,
+        position: pobleEspanyol,
+        title: "Poble Espanyol",
+    });
+
+    pobleEspanyolMarker.addListener("click", () => {
+        pobleEspanyolInfoWindow.open({
+            anchor: pobleEspanyolMarker,
             map,
         });
     });
