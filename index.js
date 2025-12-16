@@ -294,6 +294,36 @@ async function initMap() {
         });
     });
 
+    const tablaoCarmen = { lat: 41.36893778939506, lng: 2.148909823270879 };
+
+    const tablaoCarmenContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Tablao de Carmen</h1>' +
+        '<div id="bodyContent">' +
+        'Flamenco show with dinner, 8 April 2024' +
+        '</div>' +
+        '</div>';
+
+    const tablaoCarmenInfoWindow = new google.maps.InfoWindow({
+        content: tablaoCarmenContentString,
+        ariaLabel: "Tablao de Carmen",
+    });
+
+    const tablaoCarmenMarker = new AdvancedMarkerElement({
+        map,
+        position: tablaoCarmen,
+        title: "Tablao de Carmen",
+    });
+
+    tablaoCarmenMarker.addListener("click", () => {
+        tablaoCarmenInfoWindow.open({
+            anchor: tablaoCarmenMarker,
+            map,
+        });
+    });
+
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
 
