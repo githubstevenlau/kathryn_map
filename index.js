@@ -13,8 +13,7 @@ async function initMap() {
 
     const homeContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice"></div>' +
         '<h1 id="firstHeading" class="firstHeading">Home</h1>';
 
     const homeInfoWindow = new google.maps.InfoWindow({
@@ -40,17 +39,16 @@ async function initMap() {
 
     const boccaSocialContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
-        '<div id="infoBox-img">' +
-        '<img src="assets/images/bocca0.jpg" width="300" alt="Bocca Social entrance" />' +
-        '<img src="assets/images/bocca1.jpg" width="300" alt="Bocca Social menu" />' +
-        '</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Bocca Social</h1>' +
-        '<div id="bodyContent">' +
-        "First date with Kathryn on 10 Dec 2022. Italian restaurant on Beckenham High Street." +
-        "</div>" +
-        "</div>";
+            '<div id="siteNotice"></div>' +
+                '<div id="infoBox-img">' +
+                    '<img src="assets/images/bocca0.jpg" width="300" alt="Bocca Social entrance" />' +
+                    '<img src="assets/images/bocca1.jpg" width="300" alt="Bocca Social menu" />' +
+                '</div>' +
+            '<h1 id="firstHeading" class="firstHeading">Bocca Social</h1>' +
+            '<div id="bodyContent">' +
+                'First date with Kathryn on 10 Dec 2022. Italian restaurant on Beckenham High Street.' +
+            '</div>' +
+        '</div>';
 
     const boccaSocialInfoWindow = new google.maps.InfoWindow({
         content: boccaSocialContentString,
@@ -76,13 +74,12 @@ async function initMap() {
 
     const hotelJakartaContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
-        '<h1 id="firstHeading" class="firstHeading">Hotel Jakarta</h1>' +
-        '<div id="bodyContent">' +
-        "The beautiful hotel for our stay 25-26 April 2023. Our first holiday together." +
-        "</div>" +
-        "</div>";
+            '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
+            '<h1 id="firstHeading" class="firstHeading">Hotel Jakarta</h1>' +
+            '<div id="bodyContent">' +
+                'The beautiful hotel for our stay 25-26 April 2023. Our first holiday together.' +
+            '</div>' +
+        '</div>';
 
     const hotelJakartaInfoWindow = new google.maps.InfoWindow({
         content: hotelJakartaContentString,
@@ -112,16 +109,15 @@ async function initMap() {
 
     const keukenhofContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
+        '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
         '<div id="infoBox-img">' +
         '<img src="assets/images/keukenhof_ks_web.jpg" width="400" alt="Keukenhof Kathryn and Steven" />' +
         '</div>' +
         '<h1 id="firstHeading" class="firstHeading">Keukenhof</h1>' +
         '<div id="bodyContent">' +
         "Perfect timing for the when we visited 26 April 2023, the beautiful tulips were in full bloom." +
-        "</div>" +
-        "</div>";
+        '</div>' +
+        '</div>';
 
     const keukenhofInfoWindow = new google.maps.InfoWindow({
         content: keukenhofContentString,
