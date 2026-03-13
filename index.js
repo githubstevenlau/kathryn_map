@@ -115,7 +115,7 @@ async function initMap() {
         '</div>' +
         '<h1 id="firstHeading" class="firstHeading">Keukenhof</h1>' +
         '<div id="bodyContent">' +
-        "Perfect timing for the when we visited 26 April 2023, the beautiful tulips were in full bloom." +
+        "Perfect timing for when we visited 26 April 2023, the beautiful tulips were in full bloom." +
         '</div>' +
         '</div>';
 
