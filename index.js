@@ -137,15 +137,14 @@ async function initMap() {
 
     const sallesPereContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        "</div>" +
-        '<h1 id="firstHeading" class="firstHeading">Salles Pere IV Hotel</h1>' +
-        '<div id="bodyContent">' +
-        "Holiday in Barcelona: Kathryn, Ellis, Heath and Steven." +
-        "The lovely hotel where we stayed 7-10 April 2024, " +
-        "great location with a spa, pool and rooftop bar." +
-        "</div>" +
-        "</div>";
+            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<h1 id="firstHeading" class="firstHeading">Salles Pere IV Hotel</h1>' +
+            '<div id="bodyContent">' +
+                "Holiday in Barcelona: Kathryn, Ellis, Heath and Steven." +
+                "The lovely hotel where we stayed 7-10 April 2024, " +
+                "great location with a spa, pool and rooftop bar." +
+            '</div>' +
+        '</div>';
 
     const sallesPereInfoWindow = new google.maps.InfoWindow({
         content: sallesPereContentString,
@@ -169,8 +168,7 @@ async function initMap() {
 
     const icebarcelonaContentString =
         '<div id="content">' +
-            '<div id="siteNotice">' +
-            '</div>' +
+            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
             '<div id="infoBox-img">' +
                 '<img src="assets/images/icebar.jpg" width="400" alt="Icebarcelona Kathryn, Ellis, Heath and Steven" />' +
             '</div>' +
