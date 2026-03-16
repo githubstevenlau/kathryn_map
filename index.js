@@ -312,6 +312,15 @@ async function initMap() {
         });
     });
 
+    // Cedars Hollow Oxford - Treehouse May 2025
+    const cedarsHollow = { lat: 51.753197827181495, lng: -1.1870044999995186 };
+
+    const cedarsHollowMarker = new AdvancedMarkerElement({
+        map,
+        position: cedarsHollow,
+        title: "Cedars Hollow Oxford, The Oaks - treehouse",
+    });
+
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
 
