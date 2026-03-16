@@ -202,8 +202,7 @@ async function initMap() {
 
     const saxCafeContentString =
         '<div id="content">' +
-            '<div id="siteNotice">' +
-            '</div>' +
+            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
             '<h1 id="firstHeading" class="firstHeading">Sax Cafe</h1>' +
             '<div id="bodyContent">' +
                 'Pizza and pasta for dinner on our first night in Barcelona on 7 April 2024' +
@@ -232,12 +231,9 @@ async function initMap() {
 
     const parkGuellContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Park Guell</h1>' +
-        '<div id="bodyContent">' +
-        'Park Guell guided tour 8 April 2024' +
-        '</div>' +
+            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<h1 id="firstHeading" class="firstHeading">Park Guell</h1>' +
+            '<div id="bodyContent">Park Guell guided tour 8 April 2024</div>' +
         '</div>';
 
     const parkGuellInfoWindow = new google.maps.InfoWindow({
@@ -262,12 +258,11 @@ async function initMap() {
 
     const pobleEspanyolContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Poble Espanyol</h1>' +
-        '<div id="bodyContent">' +
-        'Examples of different Spanish architecture, 8 April 2024' +
-        '</div>' +
+            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<h1 id="firstHeading" class="firstHeading">Poble Espanyol</h1>' +
+            '<div id="bodyContent">' +
+            'Examples of different Spanish architecture, 8 April 2024' +
+            '</div>' +
         '</div>';
 
     const pobleEspanyolInfoWindow = new google.maps.InfoWindow({
@@ -292,12 +287,11 @@ async function initMap() {
 
     const tablaoCarmenContentString =
         '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Tablao de Carmen</h1>' +
-        '<div id="bodyContent">' +
-        'Flamenco show with dinner, 8 April 2024' +
-        '</div>' +
+            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<h1 id="firstHeading" class="firstHeading">Tablao de Carmen</h1>' +
+            '<div id="bodyContent">' +
+            'Flamenco show with dinner, 8 April 2024' +
+            '</div>' +
         '</div>';
 
     const tablaoCarmenInfoWindow = new google.maps.InfoWindow({
