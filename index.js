@@ -318,7 +318,7 @@ async function initMap() {
     const cedarsHollowMarker = new AdvancedMarkerElement({
         map,
         position: cedarsHollow,
-        title: "Cedars Hollow Oxford, The Oaks - treehouse",
+        title: "Cedars Hollow Oxford, The Oaks",
     });
 
     // San Sebastian October 2025
