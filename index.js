@@ -99,6 +99,14 @@ async function initMap() {
         });
     });
 
+    const seafoodAmsterdam = { lat: 52.36047384612517, lng: 4.878747481970813 };
+
+    const seafoodAmsterdamMarker = new AdvancedMarkerElement({
+        map,
+        position: seafoodAmsterdam,
+        title: "Seafood Bar",
+    });
+
     const keukenhof = { lat: 52.26975309745833, lng: 4.547123268622359 };
 
     const keukenhofMarker = new AdvancedMarkerElement({
