@@ -137,7 +137,7 @@ async function initMap() {
 
     const sallesPereContentString =
         '<div id="content">' +
-            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<div id="siteNotice">Kathryn, Steven, Ellis and Heath Barcelona 7-11 Apr 2024</div>' +
             '<h1 id="firstHeading" class="firstHeading">Salles Pere IV Hotel</h1>' +
             '<div id="bodyContent">' +
                 "Holiday in Barcelona: Kathryn, Ellis, Heath and Steven." +
@@ -168,7 +168,7 @@ async function initMap() {
 
     const icebarcelonaContentString =
         '<div id="content">' +
-            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<div id="siteNotice">Kathryn, Steven, Ellis and Heath Barcelona 7-11 Apr 2024</div>' +
             '<div id="infoBox-img">' +
                 '<img src="assets/images/icebar.jpg" width="400" alt="Icebarcelona Kathryn, Ellis, Heath and Steven" />' +
             '</div>' +
@@ -202,7 +202,7 @@ async function initMap() {
 
     const saxCafeContentString =
         '<div id="content">' +
-            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<div id="siteNotice">Kathryn, Steven, Ellis and Heath Barcelona 7-11 Apr 2024</div>' +
             '<h1 id="firstHeading" class="firstHeading">Sax Cafe</h1>' +
             '<div id="bodyContent">' +
                 'Pizza and pasta for dinner on our first night in Barcelona on 7 April 2024' +
@@ -231,7 +231,7 @@ async function initMap() {
 
     const parkGuellContentString =
         '<div id="content">' +
-            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<div id="siteNotice">Kathryn, Steven, Ellis and Heath Barcelona 7-11 Apr 2024</div>' +
             '<h1 id="firstHeading" class="firstHeading">Park Guell</h1>' +
             '<div id="bodyContent">Park Guell guided tour 8 April 2024</div>' +
         '</div>';
@@ -258,7 +258,7 @@ async function initMap() {
 
     const pobleEspanyolContentString =
         '<div id="content">' +
-            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<div id="siteNotice">Kathryn, Steven, Ellis and Heath Barcelona 7-11 Apr 2024</div>' +
             '<h1 id="firstHeading" class="firstHeading">Poble Espanyol</h1>' +
             '<div id="bodyContent">' +
             'Examples of different Spanish architecture, 8 April 2024' +
@@ -287,7 +287,7 @@ async function initMap() {
 
     const tablaoCarmenContentString =
         '<div id="content">' +
-            '<div id="siteNotice">Barcelona 7-11 Apr 2024</div>' +
+            '<div id="siteNotice">Kathryn, Steven, Ellis and Heath Barcelona 7-11 Apr 2024</div>' +
             '<h1 id="firstHeading" class="firstHeading">Tablao de Carmen</h1>' +
             '<div id="bodyContent">' +
             'Flamenco show with dinner, 8 April 2024' +
@@ -326,8 +326,7 @@ async function initMap() {
 
     const villaFavoritaContentString =
         '<div id="content">' +
-            '<div id="siteNotice">' +
-            '</div>' +
+            '<div id="siteNotice">Kathryn and Steven in San Sebastian 19-23 October 2025</div>' +
             '<h1 id="firstHeading" class="firstHeading">Hotel Villa Favorita</h1>' +
             '<div id="bodyContent">' +
                 'The gorgeous hotel where we stayed 19-20 October 2025 ' +
@@ -359,8 +358,7 @@ async function initMap() {
 
     const arimaContentString =
         '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
+            '<div id="siteNotice">Kathryn and Steven in San Sebastian 19-23 October 2025</div>' +
             '<h1 id="firstHeading" class="firstHeading">ARIMA Hotel & Spa</h1>' +
             '<div id="bodyContent">' +
                 'The beautiful hotel where we stayed 21-22 October 2025 ' +
@@ -390,8 +388,7 @@ async function initMap() {
     const martinb = { lat: 43.26694601928382, lng: -2.0156468200988975 };
     const martinbContentString =
         '<div id="content">' +
-            '<div id="siteNotice">' +
-            "</div>" +
+            '<div id="siteNotice">Kathryn and Steven in San Sebastian 19-23 October 2025</div>' +
             '<h1 id="firstHeading" class="firstHeading">Restaurante Martin Berasategui</h1>' +
             '<div id="bodyContent">' +
                 'Also referred to as Martin B, Three Star Michelin restaurant in ' +
