@@ -101,10 +101,31 @@ async function initMap() {
 
     const seafoodAmsterdam = { lat: 52.36047384612517, lng: 4.878747481970813 };
 
+    const seafoodAmsterdamContentString =
+        '<div id="content">' +
+            '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
+            '<h1 id="firstHeading" class="firstHeading">Seafood Bar</h1>' +
+            '<div id="bodyContent">' +
+                "Dinner first day 25 April 2023 before our visit to the Rijksmuseum" +
+            '</div>' +
+        '</div>';
+
+    const seafoodAmsterdamInfoWindow = new google.maps.InfoWindow({
+        content: seafoodAmsterdamContentString,
+        ariaLabel: "Keukenhof",
+    });
+
     const seafoodAmsterdamMarker = new AdvancedMarkerElement({
         map,
         position: seafoodAmsterdam,
         title: "Seafood Bar",
+    });
+
+    seafoodAmsterdamMarker.addListener("click", () => {
+        seafoodAmsterdamInfoWindow.open({
+            anchor: seafoodAmsterdamMarker,
+            map,
+        });
     });
 
     const keukenhof = { lat: 52.26975309745833, lng: 4.547123268622359 };
