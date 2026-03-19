@@ -193,6 +193,14 @@ async function initMap() {
         });
     });
 
+    const anneFrankHouse = { lat: 52.3752, lng: 4.884 };
+
+    const anneFrankHouseMarker = new AdvancedMarkerElement({
+        map,
+        position: anneFrankHouse,
+        title: "Anne Frank House",
+    });
+
     // Barcelona April 2024
     const sallesPere = { lat: 41.39695216566915, lng: 2.1924138317727158 };
 
