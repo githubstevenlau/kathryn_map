@@ -128,6 +128,38 @@ async function initMap() {
         });
     });
 
+    const rijksmuseum = { lat: 52.36, lng: 4.8852 };
+
+    const rijksmuseumContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
+        '<div id="infoBox-img">' +
+        '<img src="assets/images/rijks_vermeer.jpg" width="400" alt="Vermeer exhibition at the Rijksmuseum" />' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Rijksmuseum</h1>' +
+        '<div id="bodyContent">' +
+        "The Vermeer exhibition at the Rijksmuseum 25 April 2023" +
+        '</div>' +
+        '</div>';
+
+    const rijksmuseumInfoWindow = new google.maps.InfoWindow({
+        content: rijksmuseumContentString,
+        ariaLabel: "Rijksmuseum",
+    });
+
+    const rijksmuseumMarker = new AdvancedMarkerElement({
+        map,
+        position: rijksmuseum,
+        title: "Rijksmuseum",
+    });
+
+    rijksmuseumMarker.addListener("click", () => {
+        rijksmuseumInfoWindow.open({
+            anchor: rijksmuseumMarker,
+            map,
+        });
+    });
+
     const keukenhof = { lat: 52.26975309745833, lng: 4.547123268622359 };
 
     const keukenhofMarker = new AdvancedMarkerElement({
