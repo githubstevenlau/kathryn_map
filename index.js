@@ -201,6 +201,25 @@ async function initMap() {
         title: "Anne Frank House",
     });
 
+    const anneFrankHouseContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Anne Frank House</h1>' +
+        '<div id="bodyContent">Visit to the Anne Frank House museum on 26 April 2023</div>' +
+        '</div>';
+
+    const anneFrankHouseInfoWindow = new google.maps.InfoWindow({
+        content: anneFrankHouseContentString,
+        ariaLabel: "Anne Frank House",
+    });
+
+    anneFrankHouseMarker.addListener("click", () => {
+        anneFrankHouseInfoWindow.open({
+            anchor: anneFrankHouseMarker,
+            map,
+        });
+    });
+
     // Barcelona April 2024
     const sallesPere = { lat: 41.39695216566915, lng: 2.1924138317727158 };
 
@@ -209,7 +228,6 @@ async function initMap() {
             '<div id="siteNotice">Kathryn, Steven, Ellis and Heath Barcelona 7-11 Apr 2024</div>' +
             '<h1 id="firstHeading" class="firstHeading">Salles Pere IV Hotel</h1>' +
             '<div id="bodyContent">' +
-                "Holiday in Barcelona: Kathryn, Ellis, Heath and Steven." +
                 "The lovely hotel where we stayed 7-10 April 2024, " +
                 "great location with a spa, pool and rooftop bar." +
             '</div>' +
