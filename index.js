@@ -408,6 +408,19 @@ async function initMap() {
         title: "Cedars Hollow Oxford, The Oaks",
     });
 
+    const cedarsHollowContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">Cedars Hollow treehouse with Steven, Kathryn, Georgia, Lydia, Ellis and Heath 27-29 May 2024' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Cedar Hollow</h1>' +
+        '<div id="bodyContent">' +
+        'The magical treehouse where we stayed 27-29 May 2024 ' +
+        'that Kathryn organised for Steven\'s 50th birthday. The view of ' +
+        'the beach and sea from the window was stunning. Breakfast and drinks ' +
+        'in the beautiful bar.' +
+        '</div>' +
+        '</div>';
+
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
 
