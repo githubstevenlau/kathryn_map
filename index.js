@@ -75,6 +75,9 @@ async function initMap() {
     const hotelJakartaContentString =
         '<div id="content">' +
             '<div id="siteNotice">Kathryn and Steven Amsterdam 25-27 April 2023</div>' +
+            '<div id="infoBox-img">' +
+            '<img src="assets/images/hotel_jakarta.jpg" width="400" alt="Hotel Jakarta" />' +
+            '</div>' +
             '<h1 id="firstHeading" class="firstHeading">Hotel Jakarta</h1>' +
             '<div id="bodyContent">' +
                 'The beautiful hotel for our stay 25-26 April 2023. Our first holiday together.' +
