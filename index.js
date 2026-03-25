@@ -399,27 +399,36 @@ async function initMap() {
         });
     });
 
-    // Cedars Hollow Oxford - Treehouse May 2025
-    const cedarsHollow = { lat: 51.753197827181495, lng: -1.1870044999995186 };
+    // Cedar Hollow Oxford - Treehouse May 2025
+    const cedarHollow = { lat: 51.753197827181495, lng: -1.1870044999995186 };
 
-    const cedarsHollowMarker = new AdvancedMarkerElement({
+    const cedarHollowMarker = new AdvancedMarkerElement({
         map,
-        position: cedarsHollow,
-        title: "Cedars Hollow Oxford, The Oaks",
+        position: cedarHollow,
+        title: "Cedar Hollow Oxford, The Oaks",
     });
 
-    const cedarsHollowContentString =
+    const cedarHollowContentString =
         '<div id="content">' +
-        '<div id="siteNotice">Cedars Hollow treehouse with Steven, Kathryn, Georgia, Lydia, Ellis and Heath 27-29 May 2024' +
+        '<div id="siteNotice">Cedar Hollow treehouse with Steven, Kathryn, Georgia, Lydia, Ellis and Heath 27-29 May 2024' +
         '</div>' +
         '<h1 id="firstHeading" class="firstHeading">Cedar Hollow</h1>' +
         '<div id="bodyContent">' +
         'The magical treehouse where we stayed 27-29 May 2024 ' +
-        'that Kathryn organised for Steven\'s 50th birthday. The view of ' +
-        'the beach and sea from the window was stunning. Breakfast and drinks ' +
-        'in the beautiful bar.' +
         '</div>' +
         '</div>';
+
+    const cedarHollowInfoWindow = new google.maps.InfoWindow({
+        content: cedarHollowContentString,
+        ariaLabel: "Cedar Hollow",
+    });
+
+    cedarHollowMarker.addListener("click", () => {
+        cedarHollowInfoWindow.open({
+            anchor: cedarHollowMarker,
+            map,
+        });
+    });
 
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
