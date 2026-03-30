@@ -402,6 +402,37 @@ async function initMap() {
         });
     });
 
+    const sagradaFamilia = { lat: 41.4036, lng: 2.1744};
+
+    const sagradaFamiliaMarker = new AdvancedMarkerElement({
+        map,
+        position: sagradaFamilia,
+        title: "Sagrada Familia",
+    });
+
+    const sagradaFamiliaContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">Kathryn, Steven, Ellis and Heath Barcelona 7-11 Apr 2024</div>' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Sagrada Familia</h1>' +
+        '<div id="bodyContent">' +
+        'Steven and Heath visit and guided tour of the Basilica de la Sagrada Familia ' +
+        'on 9 Apr 2026 since Ellis was not feeling well in the morning.' +
+        '</div>' +
+        '</div>';
+
+    const sagradaFamiliaInfoWindow = new google.maps.InfoWindow({
+        content: sagradaFamiliaContentString,
+        ariaLabel: "Sagrada Familia",
+    });
+
+    sagradaFamiliaMarker.addListener("click", () => {
+        sagradaFamiliaInfoWindow.open({
+            anchor: sagradaFamiliaMarker,
+            map,
+        });
+    });
+
     // Cedar Hollow Oxford - Treehouse May 2025
     const cedarHollow = { lat: 51.753197827181495, lng: -1.1870044999995186 };
 
@@ -417,7 +448,7 @@ async function initMap() {
         '</div>' +
         '<h1 id="firstHeading" class="firstHeading">Cedar Hollow</h1>' +
         '<div id="bodyContent">' +
-        'The magical treehouse where we stayed 27-29 May 2024 ' +
+        'The magical treehouse where we stayed 27-29 May 2024' +
         '</div>' +
         '</div>';
 
