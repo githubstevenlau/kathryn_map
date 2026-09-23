@@ -581,7 +581,7 @@ async function initMap() {
     const bandbHotelMarker = new AdvancedMarkerElement({
         map,
         position: bandbHotel,
-        title: "B & B Hotel Marne-le-Vallee Val d\'Europe.",
+        title: "B & B Hotel Marne-la-Vallee Val d\'Europe",
     });
 
     bandbHotel.addListener("click", () => {
