@@ -564,11 +564,11 @@ async function initMap() {
     const bandbHotelContentString =
         '<div id="content">' +
         '<div id="siteNotice">Disneyland Paris August 2026</div>' +
-        '<h1 id="firstHeading" class="firstHeading">B and B Hotel</h1>' +
+        '<h1 id="firstHeading" class="firstHeading">B&B HOTEL</h1>' +
         '<div id="bodyContent">' +
-        'B&B HOTEL Marne-la-Vallee Val d\'Europe.' +
+        'B&B HOTEL Marne-la-Vallée Val d\'Europe.' +
         'The hotel where we stayed 28 August - 1 Sep 2026 ' +
-        'for our trip to Disneyland Paris with Kathryn, Ellis, Heath,' +
+        'for our trip to Disneyland Paris: Kathryn, Ellis, Heath, ' +
         'Harrison, Georgia, Lydia and Steven.' +
         '</div>' +
         '</div>';
@@ -581,7 +581,7 @@ async function initMap() {
     const bandbHotelMarker = new AdvancedMarkerElement({
         map,
         position: bandbHotel,
-        title: "B\&B HOTEL Marne-la-Vallee Val d\'Europe",
+        title: "B&B HOTEL Marne-la-Vallée d\'Europe",
     });
 
     bandbHotelMarker.addListener("click", () => {
