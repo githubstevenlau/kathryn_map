@@ -534,7 +534,7 @@ async function initMap() {
             '<div id="siteNotice">Kathryn and Steven in San Sebastian 19-23 October 2025</div>' +
             '<h1 id="firstHeading" class="firstHeading">Restaurante Martin Berasategui</h1>' +
             '<div id="bodyContent">' +
-                'Also referred to as Martin B, Three Star Michelin restaurant in ' +
+                'Also referred to as Martin B, Three-Star Michelin restaurant in ' +
                 'San Sebastián visited on 22 October 2025 for lunch to celebrate ' +
                 'Steven\'s 50th birthday organised by Kathryn. We had the amazing tasting menu.' +
             '</div>' +
@@ -566,7 +566,7 @@ async function initMap() {
         '<div id="siteNotice">Disneyland Paris August 2026</div>' +
         '<h1 id="firstHeading" class="firstHeading">B and B Hotel</h1>' +
         '<div id="bodyContent">' +
-        'B&B Hotel Marne-la-Vallee Val d\'Europe.' +
+        'B&B HOTEL Marne-la-Vallee Val d\'Europe.' +
         'The hotel where we stayed 28 August - 1 Sep 2026 ' +
         'for our trip to Disneyland Paris with Kathryn, Ellis, Heath,' +
         'Harrison, Georgia, Lydia and Steven.' +
@@ -575,13 +575,13 @@ async function initMap() {
 
     const bandbHotelInfoWindow = new google.maps.InfoWindow({
         content: bandbHotelContentString,
-        ariaLabel: "B and B Hotel",
+        ariaLabel: "B&B HOTEL",
     });
 
     const bandbHotelMarker = new AdvancedMarkerElement({
         map,
         position: bandbHotel,
-        title: "B & B Hotel Marne-la-Vallee Val d\'Europe",
+        title: "B&B HOTEL Marne-la-Vallee Val d\'Europe",
     });
 
     bandbHotel.addListener("click", () => {
@@ -597,7 +597,7 @@ async function initMap() {
         '<div id="siteNotice">Disneyland Paris August 2026</div>' +
         '<h1 id="firstHeading" class="firstHeading">Disneyland Paris</h1>' +
         '<div id="bodyContent">' +
-        'Disneyland Paris 29 - 31 Aug 2026 ' +
+        'Disneyland Paris 29-31 Aug 2026 ' +
         'with Kathryn, Ellis, Heath, Harrison, Georgia, Lydia, Steven, Natalie, Atul and Annoushka.' +
         '</div>' +
         '</div>';
