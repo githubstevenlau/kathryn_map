@@ -559,7 +559,7 @@ async function initMap() {
     });
 
     // Disneyland Paris August 2026
-    const bandbHotel = { lat: 43.31700809564674, lng: -1.9858997367605542 };
+    const bandbHotel = { lat: 48.839336104684655, lng: 2.7818560921374247 };
 
     const bandbHotelContentString =
         '<div id="content">' +
@@ -569,7 +569,7 @@ async function initMap() {
         'B&B Hotel Marne-la-Vallee Val d\'Europe.' +
         'The hotel where we stayed 28 August - 1 Sep 2026 ' +
         'for our trip to Disneyland Paris with Kathryn, Ellis, Heath,' +
-        'Harrison, Georgia, Lydia and Steven' +
+        'Harrison, Georgia, Lydia, Steven, Natalie, Atul and Annoushka.' +
         '</div>' +
         '</div>';
 
