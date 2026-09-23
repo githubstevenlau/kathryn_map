@@ -569,7 +569,7 @@ async function initMap() {
         'B&B Hotel Marne-la-Vallee Val d\'Europe.' +
         'The hotel where we stayed 28 August - 1 Sep 2026 ' +
         'for our trip to Disneyland Paris with Kathryn, Ellis, Heath,' +
-        'Harrison, Georgia, Lydia, Steven, Natalie, Atul and Annoushka.' +
+        'Harrison, Georgia, Lydia and Steven.' +
         '</div>' +
         '</div>';
 
@@ -591,15 +591,14 @@ async function initMap() {
         });
     });
 
-    const disneylandParis = { lat: 43.31700809564674, lng: -1.9858997367605542 };
-
+    const disneylandParis = { lat: 48.86861952901708, lng: 2.783725830317585 };
     const disneylandParisContentString =
         '<div id="content">' +
         '<div id="siteNotice">Disneyland Paris August 2026</div>' +
         '<h1 id="firstHeading" class="firstHeading">Disneyland Paris</h1>' +
         '<div id="bodyContent">' +
         'Disneyland Paris 29 - 31 Aug 2026 ' +
-        'with Kathryn, Ellis, Heath, Harrison, Georgia, Lydia and Steven' +
+        'with Kathryn, Ellis, Heath, Harrison, Georgia, Lydia, Steven, Natalie, Atul and Annoushka.' +
         '</div>' +
         '</div>';
 
