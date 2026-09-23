@@ -584,14 +584,7 @@ async function initMap() {
         title: "B\&B HOTEL Marne-la-Vallee Val d\'Europe",
     });
 
-    martinbMarker.addListener("click", () => {
-        martinbInfoWindow.open({
-            anchor: martinbMarker,
-            map,
-        });
-    });
-
-    bandbHotel.addListener("click", () => {
+    bandbHotelMarker.addListener("click", () => {
         bandbHotelInfoWindow.open({
             anchor: bandbHotelMarker,
             map,
