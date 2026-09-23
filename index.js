@@ -613,7 +613,7 @@ async function initMap() {
         title: "Disneyland Paris",
     });
 
-    disneylandParis.addListener("click", () => {
+    disneylandParisMarker.addListener("click", () => {
         disneylandParisInfoWindow.open({
             anchor: disneylandParisMarker,
             map,
