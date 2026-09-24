@@ -464,6 +464,9 @@ async function initMap() {
         });
     });
 
+    // Bath September 2025
+    const guildhallBath = { lat: 51.38229963513063, lng: -2.358914190887898 };
+
     // San Sebastian October 2025
     const villaFavorita = { lat: 43.31700809564674, lng: -1.9858997367605542 };
 
