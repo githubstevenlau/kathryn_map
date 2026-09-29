@@ -223,7 +223,7 @@ async function initMap() {
         });
     });
 
-    // concert Ellie Goulding Oct 2023
+    // concert Roundhouse Ellie Goulding Oct 2023
     const roundhouse = { lat: 51.54338461388903, lng: -0.1518797288351854 };
 
     const roundhouseContentString =
