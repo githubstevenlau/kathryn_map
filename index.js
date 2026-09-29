@@ -223,6 +223,37 @@ async function initMap() {
         });
     });
 
+    // concert Ellie Goulding Oct 2023
+    const roundhouse = { lat: 51.54338461388903, lng: -0.1518797288351854 };
+
+    const roundhouseContentString =
+        '<div id="content">' +
+            '<h1 id="firstHeading" class="firstHeading">Roundhouse</h1>' +
+            '<div id="bodyContent">' +
+            '<ul>' +
+                '<li>24 Oct 2023 Ellie Goulding</li>' +
+            '</ul>' +
+            '</div>' +
+        '</div>';
+
+    const roundhouseInfoWindow = new google.maps.InfoWindow({
+        content: roundhouseContentString,
+        ariaLabel: "Roundhouse",
+    });
+
+    const roundhouseMarker = new AdvancedMarkerElement({
+        map,
+        position: roundhouse,
+        title: "Roundhouse",
+    });
+
+    roundhouseMarker.addListener("click", () => {
+        roundhouseInfoWindow.open({
+            anchor: roundhouseMarker,
+            map,
+        });
+    });
+
     // Barcelona April 2024
     const sallesPere = { lat: 41.39695216566915, lng: 2.1924138317727158 };
 
