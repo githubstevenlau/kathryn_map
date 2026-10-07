@@ -495,6 +495,36 @@ async function initMap() {
         });
     });
 
+    // Jersey July 2025
+    const mertonHotel = { lat: 49.17997176167176, lng: -2.0938228299400423 };
+
+    const mertonHotelContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">Kathryn, Ellis, Heath and Steven Jersey 25-31 July 2025</div>' +
+        '<h1 id="firstHeading" class="firstHeading">Merton Hotel</h1>' +
+        '<div id="bodyContent">' +
+        'The lovely hotel where we stayed for our holiday in Jersey' +
+        '</div>' +
+        '</div>';
+
+    const mertonHotelInfoWindow = new google.maps.InfoWindow({
+        content: mertonHotelContentString,
+        ariaLabel: "Merton Hotel",
+    });
+
+    const mertonHotelMarker = new AdvancedMarkerElement({
+        map,
+        position: mertonHotel,
+        title: "Merton Hotel",
+    });
+
+    mertonHotelMarker.addListener("click", () => {
+        mertonHotelInfoWindow.open({
+            anchor: mertonHotelMarker,
+            map,
+        });
+    });
+
     // Bath September 2025
     const guildhallBath = { lat: 51.38229963513063, lng: -2.358914190887898 };
 
